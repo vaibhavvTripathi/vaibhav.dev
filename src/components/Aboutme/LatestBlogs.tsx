@@ -4,7 +4,7 @@ import React from "react";
 
 const LatestBlogs = () => {
   const posts = getPostMetadata("/src/blogs");
-  console.log(posts);
+
   return (
     <div className="mt-10">
       <h3 className="scroll-m-20 text-xl font-semibold tracking-tight mb-5">

@@ -1,6 +1,6 @@
 ---
 title: "How to setup a project for UI library in react"
-date: "2024-04-26"
+date: "July 4,2024"
 ---
 
 # React audio kit

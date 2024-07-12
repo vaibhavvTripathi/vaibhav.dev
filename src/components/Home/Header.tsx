@@ -6,7 +6,7 @@ import { Separator } from "../ui/separator";
 const socialIcons = [
   {
     name: "GitHub",
-    href: "https://github.com",
+    href: "https://github.com/vaibhavvTripathi",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ const socialIcons = [
 
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com",
+    href: "https://www.linkedin.com/in/vaibhav-tripathi-4bb644223/",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ const socialIcons = [
   },
   {
     name: "Twitter",
-    href: "https://twitter.com",
+    href: "https://x.com/ThinksVaibhav",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -4,18 +4,19 @@ import ProjectCard from "./ProjectCard";
 export type Project = {
   title: string;
   githubLink: string;
-  deployedLink?: string;
+  deployedLink: string;
   smallDescription: string;
   details: string[];
   techStack: string[];
   startDate: string;
   endDate: string;
+  img: string;
 };
 
 const projects: Project[] = [
   {
     title: "Key Jet",
-    githubLink: "your-github-link-here",
+    githubLink: "https://github.com/vaibhavvTripathi/Key-Jet-UI",
     smallDescription:
       "Duo realtime type racing game made which allows users to compete with their patners and brush up their typing skills in the practice mode.",
     details: [
@@ -33,10 +34,12 @@ const projects: Project[] = [
     ],
     startDate: "01/2024",
     endDate: "Present",
+    img: "https://i.postimg.cc/Jzj9NWZ4/Be-Funky-collage.png",
+    deployedLink: "https://key-jet-ui.vercel.app/",
   },
   {
     title: "React-Audio-Kit",
-    githubLink: "your-github-link-here",
+    githubLink: "https://github.com/vaibhavvTripathi/react-audio-kit",
     smallDescription:
       " React audio component library that leverages HTML webaudio api to create reusable audio components like Playlist Manager, Audio Recorder.",
     details: [
@@ -46,10 +49,12 @@ const projects: Project[] = [
     techStack: ["React", "HTML WebAudioApi"],
     startDate: "03/2024",
     endDate: "Present",
+    img: "https://i.postimg.cc/C1TcNvTC/image.png",
+    deployedLink: "https://www.npmjs.com/package/react-audio-kit",
   },
   {
     title: "Rythm:",
-    githubLink: "your-github-link-here",
+    githubLink: "https://github.com/vaibhavvTripathi/Rythm",
     smallDescription:
       " A music streaming platform where we can explore and listen to songs , add songs to playlist and follow/unfollow your favourite artists.",
     details: [
@@ -60,6 +65,8 @@ const projects: Project[] = [
     techStack: ["Next.js", "MongoDB", "Spotify API", "Material UI", "CSS"],
     startDate: "04/2023",
     endDate: "05/2023",
+    img: "https://i.postimg.cc/q7LNbRWm/ry.png",
+    deployedLink: "rythm-1dd1.vercel.app",
   },
 ];
 

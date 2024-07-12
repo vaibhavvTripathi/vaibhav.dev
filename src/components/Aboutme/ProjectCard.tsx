@@ -12,13 +12,14 @@ import {
 } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 import { Project } from "./ProjectList";
+import ProjectDetails from "./ProjectDescription";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Card className="w-80 max-w-md">
       <div className="relative h-48 overflow-hidden rounded-t-lg">
         <img
-          src="https://syntaxui.com/_next/image?url=%2Fimages%2Ftemplates%2Fminimal-portfolio%2F1.png&w=1200&q=75"
+          src={project.img}
           alt="Project Image"
           className="object-cover w-full h-full"
         />
@@ -28,11 +29,21 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className="space-y-2">
           <CardTitle className="text-lg">{project.title}</CardTitle>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <Link href="#" className="flex items-center gap-2" prefetch={false}>
+            <Link
+              href={project.githubLink}
+              target="blank"
+              className="flex items-center gap-2"
+              prefetch={false}
+            >
               <CodeIcon className="w-4 h-4 text-xs" />
               <span className="text-xs">View Code</span>
             </Link>
-            <Link href="#" className="flex items-center gap-2" prefetch={false}>
+            <Link
+              href={project.deployedLink}
+              target="blank"
+              className="flex items-center gap-2"
+              prefetch={false}
+            >
               <LinkIcon className="w-4 h-4" />
               <span className="text-xs">Live Demo</span>
             </Link>
@@ -50,29 +61,8 @@ export default function ProjectCard({ project }: { project: Project }) {
           <DrawerContent>
             <DrawerHeader>
               <DrawerTitle>Project Details</DrawerTitle>
-              <DrawerDescription>
-                Learn more about this project.
-              </DrawerDescription>
             </DrawerHeader>
-            <div className="px-4 prose prose-sm prose-gray dark:prose-invert max-w-none">
-              <h3>Overview</h3>
-              <p>Lorem ipsum</p>
-              <h3>Features</h3>
-              <ul>
-                <li>Responsive design</li>
-                <li>Dynamic data fetching</li>
-                <li>Smooth animations</li>
-                <li>Accessible components</li>
-              </ul>
-              <h3>Technologies Used</h3>
-              <ul>
-                <li>React</li>
-                <li>Lorem ipsum</li>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>MongoDB</li>
-              </ul>
-            </div>
+            <ProjectDetails project={project} />
           </DrawerContent>
         </Drawer>
       </CardContent>

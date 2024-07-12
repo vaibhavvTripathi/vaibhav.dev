@@ -73,6 +73,18 @@ export function Navbar() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
+          <Link href="/blogs" legacyBehavior passHref>
+            <NavigationMenuLink
+              className={cn(
+                navigationMenuTriggerStyle(),
+                pathname === "/blogs" ? "bg-accent text-accent-foreground" : ""
+              )}
+            >
+              Latest Blogs
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuTrigger onClick={() => router.push("/blogs")}>
             Latest Blogs
           </NavigationMenuTrigger>
@@ -89,7 +101,7 @@ export function Navbar() {
               ))}
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
         <NavigationMenuItem>
           <Link href="/contact" legacyBehavior passHref>
             <NavigationMenuLink
